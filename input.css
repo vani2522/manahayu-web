@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  /* Warna Utama */
+  --color-primary: #3A2301; /* Coklat*/
+  --color-secondary: #496F17; /* Hijau */
+  --color-background: #FFFFFF; /* Warna latar belakang */
+  --color-text-primary: #0F0F10; /* Warna teks Hitam */
+  --color-text-secondary: #FFFFFF; /* Warna teks Putih */
+  --color-text-tiga: #4A562E; /* Warna Hijau */
+  --color-text-empat: #6F6C90; /* Warna teks Putih */
+
+  /* Font Kustom */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Playfair Display', serif, sans-serif; 
+
+  /* Ukuran dan Spasi */
+  --font-size-base: 16px; /* Ukuran font dasar */
+  --line-height: 1.5; /* Jarak antar baris */
+  --padding-base: 20px; /* Padding dasar */
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-secondary{
+    background-color: var(--color-secondary);
+  }
+  
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  
+  /* Custom class dengan font */
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+  
+  .font-secondary {
+    font-family: var(--font-secondary);
+  }
