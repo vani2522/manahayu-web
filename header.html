@@ -3,22 +3,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
         <link href="./output.css" rel="stylesheet">
-      </head>
-<body class="bg-secondary">
-        <!-- Header -->
-    <div class="header">
-    <header class="flex justify-between items-center bg-amber-900 text-white px-12 py-4 rounded-3xl mx-8 mt-4 shadow-lg">
-        <h1 class="text-lg font-semibold">MANAHAYU HOLISTIC FARM</h1>
-        <nav class="flex space-x-6 text-sm gap-8">
-        <a href="home.html" class="hover:text-emerald-500">Home</a>
-        <a href="#" class="hover:text-emerald-200">About Us</a>
-        <a href="#" class="hover:text-green-300">Room</a>
-        <a href="#" class="hover:text-green-300">Menu</a>
-        <a href="#" class="hover:text-green-300">Package</a>
-        <a href="#" class="hover:text-green-300">Contact</a>
-        </nav>
-    </header>
-</body>
+    </head>
+    <body>
+        <header class="fixed z-50 flex items-center justify-between px-12 py-4 font-semibold rounded-full shadow-lg font-primary top-4 left-8 right-8 text-secondary bg-primary">
+            <h1 class="text-lg font-semibold">MANAHAYU HOLISTIC FARM</h1>
+          
+            <!-- Hamburger button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          
+            <nav class="hidden gap-8 text-sm md:flex">
+              <a href="home.html" class="hover:text-tiga">Home</a>
+              <a href="#" class="hover:text-tiga">About Us</a>
+              <a href="#" class="hover:text-tiga">Room</a>
+              <a href="#" class="hover:text-tiga">Menu</a>
+              <a href="#" class="hover:text-tiga">Package</a>
+              <a href="#" class="hover:text-tiga">Contact</a>
+            </nav>
+          
+            <!-- Mobile Menu -->
+            <nav>
+              <ul id="nav-menu"
+                class="absolute left-0 z-40 flex-col hidden w-full px-4 py-4 space-y-2 shadow-md rounded-xl bg-white/10 backdrop-blur-md md:hidden top-full">
+                <li><a href="home.html" class="block py-2 font-bold transition text-tiga">Home</a></li>
+                <li><a href="contact.html" class="block py-2 font-bold transition text-tiga">Contact</a></li>
+              </ul>
+            </nav>
+          </header>          
+    </body>     
+    <script src="script.js"></script>
 </html>

@@ -21,7 +21,7 @@
   --padding-base: 20px; /* Padding dasar */
 }
 
-.bg-primary {
+  .bg-primary {
     background-color: var(--color-primary);
   }
 
@@ -31,6 +31,18 @@
   
   .text-primary {
     color: var(--color-text-primary);
+  }
+
+  .text-secondary{
+    color: var(--color-text-secondary);
+  }
+
+  .text-tiga{
+    color: var(--color-text-tiga);
+  }
+
+  .text-empat{
+    color: var(--color-text-empat);
   }
   
   /* Custom class dengan font */
