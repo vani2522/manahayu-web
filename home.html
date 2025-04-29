@@ -13,7 +13,7 @@
   <div id="header-container"></div>
 
   <!-- Hero Section -->
-  <section class="relative w-full h-screen overflow-hidden bg-cover bg-center rounded-br-[80px]">
+  <section id="Hero" class="relative w-full h-screen overflow-hidden bg-cover bg-center rounded-br-[80px]">
     <div class="absolute inset-0">
       <img src="assets/hero image.jpg" alt="hero-image" class="object-cover w-full h-full" />
       <div class="absolute inset-0 bg-black/45"></div>
@@ -42,7 +42,7 @@
   </section>
 
   <!-- About Us Section -->
-  <section class="px-6 py-16 md:px-20 md:py-24">
+  <section id="About us" class="px-6 py-16 md:px-20 md:py-24">
     <div class="mx-auto max-w-7xl">
       <div class="mb-12 text-center">
         <p class="mb-2 text-sm text-empat">About us</p>
@@ -86,7 +86,7 @@
   </section>
 
   <!-- Room Section -->
-  <section class="px-6 py-16 bg-white md:px-20 md:py-24">
+  <section id="Room" class="px-6 py-16 bg-white md:px-20 md:py-24">
     <div class="mx-auto text-center max-w-7xl">
       <p class="mb-2 text-sm text-empat">Room</p>
       <h2 class="mb-4 text-3xl font-semibold font-secondary text-primary md:text-4xl">
@@ -117,7 +117,7 @@
   </section>
 
   <!-- Menu Section -->
-  <section class="px-6 py-16 bg-white md:px-20 md:py-24">
+  <section id="Menu" class="px-6 py-16 bg-white md:px-20 md:py-24">
     <div class="mx-auto text-center max-w-7xl">
       <p class="mb-2 text-sm text-empat font-primary">Menu</p>
       <h2 class="mb-4 text-3xl font-semibold font-secondary text-primary md:text-4xl">
@@ -217,13 +217,63 @@
   </section>
 
   <!-- Testimoni -->
-  <section class="px-6 py-16 bg-white md:px-20 md:py-24">
+  <section id="Testimoni" class="px-6 py-16 bg-white md:px-20 md:py-24">
     <div class="mx-auto text-center max-w-7xl">
-      <p class="mb-2 text-sm text-empat font-primary">Testimoni</p>
-      <h2 class="mb-4 text-3xl font-semibold font-secondary text-primary md:text-4xl">
-        What Our Buyers Say
+      <p class="mb-2 text-sm text-gray-400 font-primary">Testimonial</p>
+      <h2 class="mb-10 text-3xl font-semibold text-gray-800 font-secondary md:text-4xl">
+        What our buyers say
       </h2>
-   
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card 1 -->
+        <div class="p-6 shadow-md outline-1 outline-gray-300 outline-solid rounded-xl">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="assets/hero image.jpg" alt="Michael Wong" class="object-cover w-16 h-16 rounded-full">
+            <div class="text-left">
+              <p class="font-semibold text-gray-800">Michael Wong</p>
+              <div class="text-sm text-yellow-400">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-sm text-left text-gray-600">
+            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.
+            Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.
+            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 shadow-md outline-1 outline-gray-300 outline-solid rounded-xl">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="assets/hero image.jpg" alt="Avril Song" class="object-cover w-16 h-16 rounded-full">
+            <div class="text-left">
+              <p class="font-semibold text-gray-800">Avril Song</p>
+              <div class="text-sm text-yellow-400">★★★★☆</div>
+            </div>
+          </div>
+          <p class="text-sm text-left text-gray-600">
+            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 shadow-md outline-1 outline-gray-300 outline-solid rounded-xl">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="assets/hero image.jpg" alt="Jeanne Wood" class="object-cover w-16 h-16 rounded-full">
+            <div class="text-left">
+              <p class="font-semibold text-gray-800">Jeanne Wood</p>
+              <div class="text-sm text-yellow-400">★★★★☆</div>
+            </div>
+          </div>
+          <p class="text-sm text-left text-gray-600">
+            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Promo   -->
+  
   <script src="script.js"></script>
 </body>
 </html>
