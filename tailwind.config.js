@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./footer.html", "./header.html",  // Pastikan path ini sesuai dengan lokasi file kamu
+    "./footer.html", "./header.html", "./room.html",  // Pastikan path ini sesuai dengan lokasi file kamu
   ],
   theme: {
     extend: {

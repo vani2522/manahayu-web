@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="overflow-x-hidden bg-white font-primary">
+
+    <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- hero section -->
+    <section class="relative w-full h-screen overflow-hidden bg-cover bg-center">
+        <div class="absolute inset-0">
+            <img src="assets/hero image.jpg" alt="hero-image" class="object-cover w-full h-full" />
+            <div class="absolute inset-0 bg-black/45"></div>
+        </div>
+        <div class="relative z-10 flex flex-col items-start justify-center h-full max-w-6xl px-6 mx-auto md:px-12 text-secondary">
+            <h2 class="mb-4 text-4xl font-bold leading-tight md:text-5xl font-secondary">
+              Enjoy Your Favorite<br>Room In Manahayu
+            </h2>
+            <p class="mb-6 text-sm leading-relaxed md:text-base font-primary">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit mattis et<br class="hidden md:block">
+              phasellus mollis sit aliquam sit nullam neque ultrices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Room Card 1 -->
+    <section class="relative z-20 -mt-24 px-4 bg-transparent mb-10">
+        <div class="max-w-5xl mx-auto bg-white rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl p-10">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+            <!-- Image -->
+            <div class="w-full md:w-[350px] h-[250px] overflow-hidden rounded-lg">
+            <!-- Gambar yang diklik -->
+            <img 
+            src="assets/HeroSection.png" 
+            alt="room img" 
+            class="object-cover w-full h-full rounded-lg cursor-pointer"
+            onclick="openModal(this.src)" 
+            />
+
+            <!-- Modal (Hidden by Default) -->
+            <div 
+            id="imageModal" 
+            class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden"
+            >
+            <div class="relative">
+            <!-- Tombol Close -->
+            <button 
+                class="absolute top-2 right-2 text-white text-2xl font-bold"
+                onclick="closeModal()"
+            >&times;</button>
+
+            <!-- Gambar Zoom -->
+            <img 
+                id="modalImage" 
+                src="" 
+                alt="Zoomed Image" 
+                class="max-w-full max-h-screen rounded-lg" 
+            />
+            </div>
+            </div>
+
+            </div>
+    
+            <!-- Text content -->
+            <div class="flex flex-col justify-between flex-1 gap-4">
+            <div>
+                <h2 class="text-5xl font-bold font-secondary">Dandang Gula Room</h2>
+                <p class="text-gray-600 font-primary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos molestias mollitia iure impedit explicabo est possimus ratione quos quisquam.
+                </p>
+            </div>
+            <a href="#">
+                <button class="flex items-center gap-2 px-4 py-2 text-white bg-secondary hover:bg-green-200 rounded-tl-xl rounded-br-xl font-primary hover:scale-105 transition">
+                    Book
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor" 
+                    class="size-5 w-5 h-5 font-bold">
+                        <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                    </svg>              
+                    </button>
+            </a>     
+            </div>
+        </div>
+    
+        <!-- Description -->
+        <div class="mt-6 text-gray-700 font-primary">
+            <p class="mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, accusantium. Commodi officia sed neque laboriosam, ullam corrupti enim quidem odio quam blanditiis repellendus ut ab eius molestias error possimus sapiente! 
+            Tempora ut possimus corporis, error voluptate alias vero dolorem quod, iusto esse qui hic eum? Accusantium beatae delectus eaque dignissimos.
+            </p>
+            <p>
+            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.
+            </p>
+        </div>
+        </div>
+  </section>
+
+  <!-- Room Card 2 -->
+  <section class="relative z-20 px-4 bg-transparent mb-10">
+    <div class="max-w-5xl mx-auto bg-white rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl p-10">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+        <!-- Image -->
+        <div class="w-full md:w-[350px] h-[250px] overflow-hidden rounded-lg">
+        <img src="assets/HeroSection.png" alt="room img" class="object-cover w-full h-full rounded-lg" />
+        </div>
+
+        <!-- Text content -->
+        <div class="flex flex-col justify-between flex-1 gap-4">
+        <div>
+            <h2 class="text-5xl font-bold font-secondary">Dandang Gula Room</h2>
+            <p class="text-gray-600 font-primary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos molestias mollitia iure impedit explicabo est possimus ratione quos quisquam.
+            </p>
+        </div>
+        <a href="#">
+            <button class="flex items-center gap-2 px-4 py-2 text-white bg-secondary hover:bg-green-200 rounded-tl-xl rounded-br-xl font-primary hover:scale-105 transition">
+                Book
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke-width="1.5" 
+                stroke="currentColor" 
+                class="size-5 w-5 h-5 font-bold">
+                    <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                </svg>              
+                </button>
+        </a>     
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-6 text-gray-700 font-primary">
+        <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, accusantium. Commodi officia sed neque laboriosam, ullam corrupti enim quidem odio quam blanditiis repellendus ut ab eius molestias error possimus sapiente! 
+        Tempora ut possimus corporis, error voluptate alias vero dolorem quod, iusto esse qui hic eum? Accusantium beatae delectus eaque dignissimos.
+        </p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.
+        </p>
+    </div>
+    </div>
+</section>
+
+  <!-- Room Card 3 -->
+  <section class="relative z-20 px-4 bg-transparent mb-10">
+    <div class="max-w-5xl mx-auto bg-white rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl p-10">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+        <!-- Image -->
+        <div class="w-full md:w-[350px] h-[250px] overflow-hidden rounded-lg">
+        <img src="assets/HeroSection.png" alt="room img" class="object-cover w-full h-full rounded-lg" />
+        </div>
+
+        <!-- Text content -->
+        <div class="flex flex-col justify-between flex-1 gap-4">
+        <div>
+            <h2 class="text-5xl font-bold font-secondary">Dandang Gula Room</h2>
+            <p class="text-gray-600 font-primary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos molestias mollitia iure impedit explicabo est possimus ratione quos quisquam.
+            </p>
+        </div>
+        <a href="#">
+            <button class="flex items-center gap-2 px-4 py-2 text-white bg-secondary hover:bg-green-200 rounded-tl-xl rounded-br-xl font-primary hover:scale-105 transition">
+                Book
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke-width="1.5" 
+                stroke="currentColor" 
+                class="size-5 w-5 h-5 font-bold">
+                    <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                </svg>              
+                </button>
+        </a>     
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-6 text-gray-700 font-primary">
+        <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, accusantium. Commodi officia sed neque laboriosam, ullam corrupti enim quidem odio quam blanditiis repellendus ut ab eius molestias error possimus sapiente! 
+        Tempora ut possimus corporis, error voluptate alias vero dolorem quod, iusto esse qui hic eum? Accusantium beatae delectus eaque dignissimos.
+        </p>
+        <p>
+        Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.
+        </p>
+    </div>
+    </div>
+</section>
+  
+<div id="footer-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
