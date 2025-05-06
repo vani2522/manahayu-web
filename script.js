@@ -1,3 +1,31 @@
+function filterMenu(category) {
+  const items = document.querySelectorAll('[data-category]');
+  items.forEach(item => {
+    if (category === 'all' || item.getAttribute('data-category') === category) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+function setActiveCategory(button, category) {
+  // Hapus semua kelas aktif
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.classList.remove('bg-secondary', 'text-white', 'shadow');
+    btn.classList.add('text-gray-500');
+  });
+
+  // Tambahkan kelas aktif ke tombol yang diklik
+  button.classList.add('bg-secondary', 'text-white', 'shadow');
+  button.classList.remove('text-gray-500');
+
+  // Jalankan fungsi filter jika ada
+  if (typeof filterMenu === 'function') {
+    filterMenu(category);
+  }
+}
+
 // Event listener untuk menunggu sampai konten HTML selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
   // Memuat komponen header dan footer ke dalam halaman setelah DOM siap
