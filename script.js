@@ -135,15 +135,3 @@ function setupFAQ() {
     });
   });
 }
-
-function openModal(src) {
-  const modal = document.getElementById('imageModal');
-  const modalImage = document.getElementById('modalImage');
-
-  modalImage.src = src;
-  modal.classList.remove('hidden');
-}
-
-function closeModal() {
-  document.getElementById('imageModal').classList.add('hidden');
-}
