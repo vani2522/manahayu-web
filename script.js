@@ -33,33 +33,46 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("footer-container", "./component/footer.html");
 
   // Inisialisasi carousel ketika halaman siap
-  let currentIndex = 0;  
-  const images = document.getElementById('carouselImages').children; 
-  const indicators = document.getElementById('carouselIndicators').children; 
+  const carousels = document.querySelectorAll('.carouselImages');
+  carousels.forEach((carousel, index) => {
+    let currentIndex = 0;
+    const images = carousel.children;
+    const indicators = document.querySelectorAll('.carouselIndicators')[index]?.children;
+    const prevBtn = document.querySelectorAll('.prev-slide')[index];
+    const nextBtn = document.querySelectorAll('.next-slide')[index];
 
-  // Fungsi untuk memperbarui tampilan carousel
-  function updateCarousel() {
-    const offset = -currentIndex * 100;  
-    document.getElementById('carouselImages').style.transform = `translateX(${offset}%)`;  
+    // Fungsi untuk memperbarui tampilan carousel
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
 
-    // Mengubah indikator aktif pada carousel
-    for (let i = 0; i < indicators.length; i++) {
-      indicators[i].classList.remove('bg-green-600'); 
-      indicators[i].classList.add('bg-gray-300');  
+      if (indicators) {
+        for (let i = 0; i < indicators.length; i++) {
+          indicators[i].classList.remove('bg-green-600');
+          indicators[i].classList.add('bg-gray-300');
+        }
+        indicators[currentIndex].classList.add('bg-green-600');
+      }
     }
-    indicators[currentIndex].classList.add('bg-green-600');  
-  }
 
-  // Fungsi untuk berpindah ke slide berikutnya atau sebelumnya
-  function moveSlide(step) {
-    currentIndex += step;  
-    if (currentIndex >= images.length) currentIndex = 0;  
-    if (currentIndex < 0) currentIndex = images.length - 1;  
-    updateCarousel();  
-  }
+    // Fungsi untuk berpindah ke slide berikutnya atau sebelumnya
+    function moveSlide(step) {
+      currentIndex = (currentIndex + step + images.length) % images.length;
+      updateCarousel();
+    }
 
-  // Optional: Otomatis berpindah slide setiap 3 detik
-  setInterval(() => moveSlide(1), 3000);
+    // Event listener tombol kiri dan kanan
+    if (prevBtn) prevBtn.addEventListener('click', () => moveSlide(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => moveSlide(1));
+
+    // Otomatis berpindah slide setiap 3 detik
+    setInterval(() => moveSlide(1), 3000);
+
+    // Inisialisasi tampilan awal carousel
+    updateCarousel();
+  });
+});
+
 
   // Tombol navigasi kiri
   const prevBtn = document.querySelector(".prev-slide");
@@ -76,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       moveSlide(1);
     });
   }
-});
 
 // Fungsi untuk memuat komponen (seperti header atau footer) ke dalam elemen dengan ID tertentu
 function loadComponent(containerId, file) {
