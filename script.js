@@ -54,8 +54,8 @@
 
       prevButton?.addEventListener('click', () => move(-1));
       nextButton?.addEventListener('click', () => move(1));
-      setInterval(() => move(1), 3000);   // autoplay
-      update();                           // first paint
+      setInterval(() => move(1), 3000);   
+      update();                           
     });
   }
 
@@ -67,7 +67,7 @@
       const container = document.getElementById(containerId);
       if (!container) return;
       container.innerHTML = html;
-      afterLoad?.();                      // jalankan callback khusus
+      afterLoad?.();                     
     } catch (err) {
       console.error(`Error loading ${file}`, err);
     }
@@ -105,8 +105,6 @@
 
   /* ---------- 7. DOM Ready ---------- */
   document.addEventListener('DOMContentLoaded', () => {
-    /*  ❯❯  COMMENT baris di bawah ini jika header/footer
-        ❯❯  sudah ditulis langsung di file HTML.          */
     loadComponent('header-container', './component/header.html', setupMenu);
     loadComponent('footer-container', './component/footer.html', () =>
       setupFAQ($('#footer-container'))
