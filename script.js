@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+ 
+ 
+//HEADER
 // Fungsi untuk memuat komponen (seperti header atau footer) ke dalam elemen dengan ID tertentu
 function loadComponent(containerId, file) {
   fetch(file)  
@@ -116,6 +119,9 @@ function setupMenu() {
   }
 }
 
+
+
+// FOOTER
 // Fungsi untuk menyiapkan interaksi FAQ (Frequently Asked Questions)
 function setupFAQ() {
   const buttons = document.querySelectorAll('.faq-toggle'); 
@@ -147,33 +153,3 @@ function setupFAQ() {
     });
   });
 }
-
-
-  const overlay = document.getElementById('lightboxOverlay');
-  const overlayImg = document.getElementById('lightboxImage');
-  const closeBtn = document.getElementById('lightboxClose');
-  const carouselImgs = document.querySelectorAll('#carouselImages img');
-
-  carouselImgs.forEach(img => {
-    img.classList.add('cursor-zoom-in');
-    img.addEventListener('click', () => {
-      overlayImg.src = img.src;
-      overlay.classList.remove('hidden');
-      overlay.classList.add('flex');
-    });
-  });
-
-  const closeLightbox = () => {
-    overlay.classList.remove('flex');
-    overlay.classList.add('hidden');
-  };
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay || e.target === closeBtn) {
-      closeLightbox();
-    }
-  });
-
-  closeBtn.addEventListener('click', closeLightbox);
-
-
