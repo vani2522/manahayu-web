@@ -26,6 +26,9 @@ module.exports = {
       padding: {
         base: 'var(--padding-base)', // Padding dasar dari variabel CSS
       },
+      height: {
+        120: '30rem', // 120 * 4px = 480px atau 30rem
+      },
     },
   },
   plugins: [],
