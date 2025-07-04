@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="fixed z-50 flex items-center justify-between px-6 py-4 font-semibold rounded-full shadow-lg font-primary top-4 left-4 right-4 text-secondary bg-primary">
-      <h1 class="text-lg font-semibold">MANAHAYU HOLISTIC FARM</h1>
+  <body class="bg-white font-primary">
+    <header class="fixed z-50 flex items-center justify-between px-6 py-3 font-semibold rounded-full shadow-lg top-4 left-4 right-4 md:px-12 bg-primary text-secondary">
+      <!-- Logo -->
+      <img src="assets/manahayu.png" alt="Logo Manahayu" class="object-contain h-auto w-28" />
 
       <!-- Hamburger button -->
       <button id="menu-btn" class="md:hidden focus:outline-none">
@@ -18,17 +19,17 @@
       </button>
 
       <!-- Desktop Menu -->
-      <nav class="hidden gap-6 text-sm md:flex">
-        <a href="home.html" class="hover:text-tiga">Home</a>
-        <a href="aboutus.html" class="hover:text-tiga">About Us</a>
-        <a href="room.html" class="hover:text-tiga">Room</a>
-        <a href="menu.html" class="hover:text-tiga">Menu</a>
-        <a href="package.html" class="hover:text-tiga">Package</a>
-        <a href="contact.html" class="hover:text-tiga">Contact</a>
+      <nav class="hidden space-x-6 text-sm transition-all md:flex">
+        <a href="home.html" class="transition hover:text-tiga">Home</a>
+        <a href="aboutus.html" class="transition hover:text-tiga">About Us</a>
+        <a href="room.html" class="transition hover:text-tiga">Room</a>
+        <a href="menu.html" class="transition hover:text-tiga">Menu</a>
+        <a href="package.html" class="transition hover:text-tiga">Package</a>
+        <a href="contact.html" class="transition hover:text-tiga">Contact</a>
       </nav>
 
       <!-- Mobile Menu -->
-      <ul id="nav-menu" class="absolute left-0 z-40 flex-col hidden w-full px-4 py-4 mt-2 space-y-2 shadow-md rounded-xl bg-white/90 backdrop-blur-md md:hidden top-full">
+      <ul id="nav-menu" class="absolute left-0 z-40 flex-col hidden w-full px-6 py-4 mt-2 space-y-2 shadow-md top-full rounded-xl bg-white/90 backdrop-blur-md md:hidden">
         <li><a href="home.html" class="block py-2 font-bold text-tiga">Home</a></li>
         <li><a href="aboutus.html" class="block py-2 font-bold text-tiga">About Us</a></li>
         <li><a href="room.html" class="block py-2 font-bold text-tiga">Room</a></li>
@@ -38,6 +39,14 @@
       </ul>
     </header>
 
-    <script src="script.js"></script>
+    <script>
+      // Simple toggle for mobile nav menu
+      const menuBtn = document.getElementById('menu-btn');
+      const navMenu = document.getElementById('nav-menu');
+
+      menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
